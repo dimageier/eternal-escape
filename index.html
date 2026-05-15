@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ETERNAL ESCAPE — Dimitri Geier | Escape the Finite. Enter the Infinite.</title>
+    <meta name="description" content="Enter the cosmic chambers of Dimitri Geier. An immersive sonic and visual journey through the nature of God, the Eternal Son, and the Paradise Trinity. Experience The Eternal Escape.">
+    <meta name="author" content="Dimitri Geier">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="THE ETERNAL ESCAPE — Dimitri Geier">
+    <meta property="og:description" content="A cinematic journey from the finite self into the infinite divine. Music, visions, and sacred geometry from the Urantian artist.">
+    <meta property="og:image" content="assets/album-eternal-son.jpg">
+    <meta property="og:url" content="https://dimitrigeier.com/eternal-escape">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon (cosmic gold circle) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='none' stroke='%23E8D5A3' stroke-width='7'/%3E%3Ccircle cx='50' cy='50' r='18' fill='%23E8D5A3'/%3E%3C/svg%3E">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display for transcendent headings + Inter for refined body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --void: #050505;
+            --charcoal: #111111;
+            --deep-char: #1a1a1a;
+            --gold: #E8D5A3;
+            --gold-dark: #C5A46E;
+            --cosmic-purple: #4C1D95;
+            --cosmic-violet: #6D28D9;
+            --cyan: #67E8F9;
+            --star: #EDE9E3;
+        }
+        
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background: var(--void);
+            color: #EDE9E3;
+            overflow-x: hidden;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-feature-settings: "tnum", "lnum";
+        }
+
+        /* Cinematic Dark Glassmorphism */
+        .glass {
+            background: rgba(17, 17, 17, 0.75);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(232, 213, 163, 0.1);
+        }
+
+        .glass-gold {
+            background: rgba(17, 17, 17, 0.85);
+            border: 1px solid rgba(232, 213, 163, 0.25);
+        }
+
+        /* Elegant Gold Text & Accents */
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .section-title {
+            font-size: clamp(2.25rem, 6vw, 4.5rem);
+            line-height: 0.95;
+            letter-spacing: -0.025em;
+        }
+
+        /* God Ray / Divine Light Effects */
+        .god-ray {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .god-ray::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 30%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(
+                135deg,
+                transparent 20%,
+                rgba(232, 213, 163, 0.06) 35%,
+                rgba(232, 213, 163, 0.12) 50%,
+                rgba(232, 213, 163, 0.06) 65%,
+                transparent 80%
+            );
+            transform: rotate(25deg);
+            pointer-events: none;
+            animation: godray-sweep 18s ease-in-out infinite;
+        }
+
+        @keyframes godray-sweep {
+            0%, 100% { transform: rotate(25deg) translateX(-30%); }
+            50% { transform: rotate(25deg) translateX(40%); }
+        }
+
+        /* Starfield Canvas Layer */
+        .starfield {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        /* Sacred Geometry Interactive Hotspots */
+        .sacred-hotspot {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+        }
+        
+        .sacred-hotspot:hover {
+            transform: scale(1.08) rotate(3deg);
+            filter: brightness(1.2) saturate(1.1);
+        }
+        
+        .sacred-hotspot.unlocked {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .sacred-svg {
+            filter: drop-shadow(0 0 12px rgba(232, 213, 163, 0.4));
+            transition: transform 0.6s cubic-bezier(0.23, 1.0, 0.32, 1);
+        }
+        
+        .sacred-hotspot:hover .sacred-svg {
+            transform: rotate(15deg) scale(1.05);
+        }
+
+        /* Room Sections — Full Cinematic Immersion */
+        .eternal-room {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .room-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(5,5,5,0.75) 0%,
+                rgba(5,5,5,0.55) 25%,
+                rgba(5,5,5,0.65) 75%,
+                rgba(5,5,5,0.9) 100%
+            );
+            z-index: 2;
+        }
+
+        .room-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Progress / Keys UI */
+        .keys-progress {
+            background: rgba(5,5,5,0.9);
+            border: 1px solid rgba(232, 213, 163, 0.15);
+        }
+
+        .key-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .key-icon.collected {
+            color: var(--gold);
+            filter: drop-shadow(0 0 6px rgba(232, 213, 163, 0.6));
+        }
+
+        /* Modal — Luxurious Cinematic */
+        .modal {
+            animation: modal-enter 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        @keyframes modal-enter {
+            from { opacity: 0; transform: translateY(40px) scale(0.985); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .modal-backdrop {
+            animation: backdrop-enter 0.3s ease forwards;
+        }
+
+        /* Vision Cards */
+        .vision-card {
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
+                        box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+        }
+        
+        .vision-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 70px -15px rgb(0 0 0 / 0.5);
+        }
+        
+        .vision-card img, .vision-card video {
+            transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .vision-card:hover img, .vision-card:hover video {
+            transform: scale(1.08);
+        }
+
+        /* Prompt Portal */
+        .prompt-output {
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.65;
+        }
+
+        /* Elegant Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A46E;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E8D5A3;
+        }
+
+        /* Parallax & Scroll Reveal Helpers */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .eternal-room {
+                background-attachment: scroll;
+                min-height: 100dvh;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Floating Nav on Scroll */
+        .nav-scrolled {
+            background: rgba(5, 5, 5, 0.96);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(232, 213, 163, 0.08);
+        }
+
+        /* Subtle Particle / Energy Lines */
+        .cosmic-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(232,213,163,0.15), transparent);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-[#EDE9E3] selection:bg-[#E8D5A3] selection:text-[#050505]">
+    
+    <!-- ============================================ -->
+    <!-- SCHEMA.ORG MARKUP: Artist + MusicAlbum -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "MusicGroup",
+                "@id": "https://dimitrigeier.com/#artist",
+                "name": "Dimitri Geier",
+                "alternateName": ["Dmitri Geier", "d.labs.fl", "Urantian Beats"],
+                "url": "https://dimitrigeier.com",
+                "image": "assets/artist-portrait.jpg",
+                "description": "German-born Miami multimedia artist creating spiritually-infused electronic music and AI-generated cinematic visions inspired by The Urantia Book cosmology.",
+                "genre": ["Ambient", "Electronic", "Spiritual", "Cinematic", "Experimental"],
+                "sameAs": [
+                    "https://open.spotify.com/artist/4sGEFMIiICuXFTyfWiosQ2",
+                    "https://soundcloud.com/dimitri-geier-1",
+                    "https://www.instagram.com/dima.tarantino/",
+                    "https://www.facebook.com/d.labs.fl/",
+                    "https://github.com/DimitriGeier"
+                ],
+                "memberOf": {
+                    "@type": "Organization",
+                    "name": "Urantian Beats"
+                }
+            },
+            {
+                "@type": "MusicAlbum",
+                "name": "The Eternal Son",
+                "albumProductionType": "https://schema.org/StudioAlbum",
+                "byArtist": {
+                    "@id": "https://dimitrigeier.com/#artist"
+                },
+                "datePublished": "2026",
+                "numTracks": 16,
+                "genre": "Ambient Electronic / Spiritual",
+                "url": "https://open.spotify.com/album/1pJahPRkkvROVUYkzDyVpI",
+                "image": "assets/album-eternal-son.jpg"
+            },
+            {
+                "@type": "MusicAlbum",
+                "name": "The Paradise Trinity",
+                "byArtist": {
+                    "@id": "https://dimitrigeier.com/#artist"
+                },
+                "datePublished": "2026",
+                "genre": "Ambient Electronic / Spiritual",
+                "url": "https://open.spotify.com/album/2P7HyjhtWPuKhM4zyzbwL3"
+            }
+        ]
+    }
+    </script>
+
+    <!-- ============================================ -->
+    <!-- FIXED NAV — Elegant & Minimal -->
+    <!-- ============================================ -->
+    <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-6 md:px-10 py-5 flex items-center justify-between">
+                
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-7 h-7 rounded-full border border-[#E8D5A3]/60 flex items-center justify-center">
+                        <div class="w-3 h-3 rounded-full bg-[#E8D5A3]"></div>
+                    </div>
+                    <a href="#" class="font-semibold tracking-[2px] text-sm uppercase">DIMITRI GEIER</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-10 text-sm tracking-[0.5px] font-medium">
+                    <a href="#journey" class="hover:text-[#E8D5A3] transition-colors">The Journey</a>
+                    <a href="#eternal-son" class="hover:text-[#E8D5A3] transition-colors">The Eternal Son</a>
+                    <a href="#visions" class="hover:text-[#E8D5A3] transition-colors">Visions</a>
+                    <a href="#process" class="hover:text-[#E8D5A3] transition-colors">The Process</a>
+                    <a href="#connect" class="hover:text-[#E8D5A3] transition-colors">Connect</a>
+                </div>
+
+                <!-- Right Side: Keys Progress + Stream + Social -->
+                <div class="flex items-center gap-x-3 md:gap-x-5">
+                    
+                    <!-- Keys Collected (Gamification) -->
+                    <div onclick="showKeysModal()" class="hidden sm:flex items-center gap-x-2 px-4 py-1.5 rounded-full keys-progress text-xs tracking-widest cursor-pointer hover:border-[#E8D5A3]/40 transition-all">
+                        <span class="text-[#E8D5A3]/70">KEYS</span>
+                        <span id="keys-count" class="font-mono text-[#E8D5A3] font-medium">0/6</span>
+                    </div>
+
+                    <!-- Stream Button -->
+                    <a href="https://open.spotify.com/artist/4sGEFMIiICuXFTyfWiosQ2" target="_blank" 
+                       class="px-5 py-2 text-xs tracking-[1.5px] font-medium border border-[#E8D5A3]/40 hover:bg-[#E8D5A3] hover:text-[#050505] transition-all rounded-full">
+                        STREAM
+                    </a>
+
+                    <!-- Mobile Hamburger -->
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-[#E8D5A3]" aria-label="Menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-[#050505] z-[60] pt-20 px-6">
+        <div class="flex flex-col text-xl gap-y-6 tracking-wider font-medium">
+            <a href="#journey" class="py-2 mobile-link">The Journey</a>
+            <a href="#eternal-son" class="py-2 mobile-link">The Eternal Son</a>
+            <a href="#visions" class="py-2 mobile-link">Visions</a>
+            <a href="#process" class="py-2 mobile-link">The Process</a>
+            <a href="#connect" class="py-2 mobile-link">Connect</a>
+            <div class="h-px bg-white/10 my-4"></div>
+            <a href="https://open.spotify.com/artist/4sGEFMIiICuXFTyfWiosQ2" target="_blank" class="text-[#E8D5A3]">Listen on Spotify</a>
+            <a href="https://soundcloud.com/dimitri-geier-1" target="_blank" class="text-[#E8D5A3]">SoundCloud</a>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 1. HERO / ENTRY PORTAL -->
+    <!-- ============================================ -->
+    <header id="hero" class="relative min-h-[100dvh] flex items-center justify-center pt-16 overflow-hidden god-ray">
+        
+        <!-- Background Image + Overlays -->
+        <div class="absolute inset-0 bg-[#050505]">
+            <img src="assets/hero-cosmic.jpg" alt="Ethereal cosmic portal with golden god rays and sacred geometry dissolving into infinite space — the entry to The Eternal Escape" 
+                 class="absolute inset-0 w-full h-full object-cover opacity-90">
+            
+            <!-- Dark gradient overlays for depth -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(#1a1a1a_0.6px,transparent_1px)] bg-[length:3px_3px] opacity-40"></div>
+        </div>
+
+        <!-- Subtle Animated Starfield Canvas -->
+        <canvas id="hero-starfield" class="starfield"></canvas>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            
+            <!-- Small Eyebrow -->
+            <div class="inline-flex items-center gap-x-2 mb-8 px-5 py-1 rounded-full border border-[#E8D5A3]/20 text-xs tracking-[3px] text-[#E8D5A3]/70">
+                <div class="w-1 h-1 bg-[#E8D5A3] rounded-full animate-pulse"></div>
+                MIAMI • 2026
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="heading-serif text-[clamp(3.25rem,9vw,7.5rem)] leading-[0.9] tracking-[-3.5px] mb-4">
+                DIMITRI GEIER
+            </h1>
+            <div class="heading-serif text-[clamp(2.1rem,5.5vw,3.75rem)] tracking-[-1.8px] text-[#E8D5A3] mb-9">
+                THE ETERNAL ESCAPE
+            </div>
+
+            <!-- Poetic Tagline -->
+            <p class="max-w-md mx-auto text-xl md:text-2xl text-[#EDE9E3]/90 tracking-tight mb-12">
+                Escape the Finite.<br>Enter the Infinite.
+            </p>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="document.getElementById('journey').scrollIntoView({ behavior: 'smooth' })" 
+                        class="group px-10 py-4 bg-[#E8D5A3] hover:bg-white active:bg-[#E8D5A3] text-[#050505] font-medium tracking-[1.5px] text-sm rounded-full transition-all flex items-center justify-center gap-x-3">
+                    BEGIN THE ESCAPE
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 group-active:translate-y-0.5 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </button>
+                
+                <a href="https://open.spotify.com/artist/4sGEFMIiICuXFTyfWiosQ2" target="_blank"
+                   class="px-9 py-4 border border-[#E8D5A3]/50 hover:bg-white/5 text-sm tracking-[1.5px] rounded-full transition-all flex items-center gap-x-2.5">
+                    <span>STREAM THE ETERNAL SON</span>
+                </a>
+            </div>
+
+            <div class="mt-16 text-[10px] tracking-[2px] text-[#E8D5A3]/50">SCROLL TO ENTER THE FIRST CHAMBER</div>
+        </div>
+
+        <!-- Bottom Subtle Scroll Indicator -->
+        <div class="absolute bottom-9 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-1 text-[#E8D5A3]/40">
+            <div class="h-px w-6 bg-current"></div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- 2. THE JOURNEY — ROOM-BY-ROOM IMMERSION -->
+    <!-- ============================================ -->
+    <section id="journey" class="pt-16 pb-12 bg-[#050505] relative">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 md:mb-16 gap-y-4">
+                <div>
+                    <div class="uppercase tracking-[3px] text-xs text-[#E8D5A3]/70 mb-3">A NARRATIVE IN SIX CHAMBERS</div>
+                    <h2 class="heading-serif text-[clamp(2.75rem,5.5vw,4.25rem)] leading-none tracking-tighter">The Journey</h2>
+                </div>
+                <p class="max-w-md text-[#EDE9E3]/70 text-[15px]">
+                    From the limitations of the self to the revelation of the Paradise Trinity. 
+                    Each chamber unlocks a memory, a tone, a vision.
+                </p>
+            </div>
+        </div>
+
+        <!-- ROOM 1: THE FINITE SELF -->
+        <div id="room-1" class="eternal-room" style="background-image: url('assets/awakening-figure.jpg')">
+            <div class="room-overlay"></div>
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 room-content w-full py-20 md:py-24">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <div class="px-3.5 py-px text-xs tracking-[2px] border border-[#E8D5A3]/40 rounded">CHAMBER I</div>
+                        <div class="text-[#E8D5A3] text-sm tracking-[1px]">THE VEIL</div>
+                    </div>
+                    
+                    <h3 class="heading-serif text-6xl md:text-7xl leading-none tracking-[-2.5px] mb-6">The Finite Self</h3>
+                    
+                    <p class="text-2xl leading-tight text-[#EDE9E3]/90 mb-9 max-w-lg">
+                        Here begins the forgetting. The self that believes it is alone, 
+                        separate from the whole.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-3 mb-12">
+                        <button onclick="unlockRoom(1, this)" 
+                                class="unlock-btn px-8 py-3 text-sm border border-[#E8D5A3] text-[#E8D5A3] hover:bg-[#E8D5A3] hover:text-[#050505] rounded-full tracking-widest transition">
+                            RECEIVE THE FIRST KEY
+                        </button>
+                        <span class="text-xs text-[#E8D5A3]/50">• Awakening begins</span>
+                    </div>
+
+                    <!-- Sacred Geometry Hotspots -->
+                    <div class="flex items-center gap-8">
+                        <div onclick="unlockHotspot(1, 'mirror', this)" class="sacred-hotspot group">
+                            <svg width="52" height="52" viewBox="0 0 52 52" class="sacred-svg">
+                                <circle cx="26" cy="26" r="22" fill="none" stroke="#E8D5A3" stroke-width="1.25" stroke-opacity="0.65"/>
+                                <circle cx="26" cy="26" r="14" fill="none" stroke="#E8D5A3" stroke-width="1" stroke-opacity="0.4"/>
+                                <line x1="26" y1="4" x2="26" y2="48" stroke="#E8D5A3" stroke-width="0.75" stroke-opacity="0.3"/>
+                                <line x1="4" y1="26" x2="48" y2="26" stroke="#E8D5A3" stroke-width="0.75" stroke-opacity="0.3"/>
+                            </svg>
+                            <div class="text-[10px] tracking-widest mt-1.5 text-center text-[#E8D5A3]/60 group-hover:text-[#E8D5A3]">THE MIRROR</div>
+                        </div>
+                        <div onclick="unlockHotspot(1, 'breath', this)" class="sacred-hotspot group">
+                            <svg width="52" height="52" viewBox="0 0 52 52" class="sacred-svg">
+                                <path d="M26 8 Q38 18 26 26 Q14 34 26 44" fill="none" stroke="#E8D5A3" stroke-width="1.5"/>
+                                <path d="M26 12 Q34 19 26 24 Q18 29 26 36" fill="none" stroke="#E8D5A3" stroke-width="0.9" stroke-opacity="0.5"/>
+                            </svg>
+                            <div class="text-[10px] tracking-widest mt-1.5 text-center text-[#E8D5A3]/60 group-hover:text-[#E8D5A3]">THE BREATH</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOM 2: THE NATURE OF GOD -->
+        <div id="room-2" class="eternal-room" style="background-image: url('assets/chamber-temple.jpg')">
+            <div class="room-overlay"></div>
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 room-content w-full py-20 md:py-24">
+                <div class="max-w-2xl ml-auto text-right">
+                    <div class="flex items-center justify-end gap-x-4 mb-6">
+                        <div class="text-[#E8D5A3] text-sm tracking-[1px]">CHAMBER II</div>
+                        <div class="px-3.5 py-px text-xs tracking-[2px] border border-[#E8D5A3]/40 rounded">THE FATHER</div>
+                    </div>
+                    
+                    <h3 class="heading-serif text-6xl md:text-7xl leading-none tracking-[-2.5px] mb-6">The Nature of God</h3>
+                    
+                    <p class="text-2xl leading-tight text-[#EDE9E3]/90 mb-9 max-w-lg ml-auto">
+                        The Universal Father. The First Source and Center. 
+                        Love is the pattern of all personality.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-end gap-3 mb-12">
+                        <button onclick="unlockRoom(2, this)" 
+                                class="unlock-btn px-8 py-3 text-sm border border-[#E8D5A3] text-[#E8D5A3] hover:bg-[#E8D5A3] hover:text-[#050505] rounded-full tracking-widest transition">
+                            RECEIVE THE SECOND KEY
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-end gap-8">
+                        <div onclick="unlockHotspot(2, 'trinity', this)" class="sacred-hotspot group">
+                            <svg width="58" height="58" viewBox="0 0 58 58" class="sacred-svg">
+                                <circle cx="29" cy="29" r="24" fill="none" stroke="#E8D5A3" stroke-width="1" stroke-opacity="0.6"/>
+                                <circle cx="29" cy="19" r="6" fill="none" stroke="#E8D5A3" stroke-width="1.5"/>
+                                <circle cx="19" cy="36" r="6" fill="none" stroke="#E8D5A3" stroke-width="1.5"/>
+                                <circle cx="39" cy="36" r="6" fill="none" stroke="#E8D5A3" stroke-width="1.5"/>
+                            </svg>
+                            <div class="text-[10px] tracking-widest mt-1.5 text-center text-[#E8D5A3]/60 group-hover:text-[#E8D5A3]">THE THREE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOM 3: THE ETERNAL SON (Featured) -->
+        <div id="room-3" class="eternal-room" style="background-image: url('assets/portal-divine.jpg')">
+            <div class="room-overlay"></div>
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 room-content w-full py-20 md:py-24">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <div class="px-3.5 py-px text-xs tracking-[2px] border border-[#E8D5A3]/40 rounded">CHAMBER III</div>
+                        <div class="text-[#E8D5A3] text-sm tracking-[1px]">THE SON</div>
+                    </div>
+                    
+                    <h3 class="heading-serif text-6xl md:text-7xl leading-none tracking-[-2.5px] mb-6">The Eternal Son</h3>
+                    
+                    <p class="text-2xl leading-tight text-[#EDE9E3]/90 mb-9 max-w-lg">
+                        The Original Son. The perfect personality expression of the Father. 
+                        Golden light. The bridge between the finite and the infinite.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-3 mb-10">
+                        <button onclick="unlockRoom(3, this)" 
+                                class="unlock-btn px-8 py-3 text-sm border border-[#E8D5A3] text-[#E8D5A3] hover:bg-[#E8D5A3] hover:text-[#050505] rounded-full tracking-widest transition">
+                            RECEIVE THE SON KEY
+                        </button>
+                        <a href="#eternal-son" class="text-xs tracking-widest underline underline-offset-4 decoration-[#E8D5A3]/30 hover:decoration-[#E8D5A3]">EXPLORE THE ALBUM →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOM 4: THE OVERCONTROL OF SUPREMACY -->
+        <div id="room-4" class="eternal-room" style="background-image: url('assets/chamber-temple.jpg')">
+            <div class="room-overlay"></div>
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 room-content w-full py-20 md:py-24">
+                <div class="max-w-2xl ml-auto text-right">
+                    <div class="flex items-center justify-end gap-x-4 mb-6">
+                        <div class="text-[#E8D5A3] text-sm tracking-[1px]">CHAMBER IV</div>
+                        <div class="px-3.5 py-px text-xs tracking-[2px] border border-[#E8D5A3]/40 rounded">THE SPIRIT</div>
+                    </div>
+                    
+                    <h3 class="heading-serif text-6xl md:text-7xl leading-none tracking-[-2.5px] mb-6">The Overcontrol of Supremacy</h3>
+                    
+                    <p class="text-2xl leading-tight text-[#EDE9E3]/90 mb-9 max-w-lg ml-auto">
+                        The Infinite Spirit. The living mind of the cosmos. 
+                        The breath that moves all things toward completion.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-end gap-3 mb-12">
+                        <button onclick="unlockRoom(4, this)" 
+                                class="unlock-btn px-8 py-3 text-sm border border-[#E8D5A3] text-[#E8D5A3] hover:bg-[#E8D5A3] hover:text-[#050505] rounded-full tracking-widest transition">
+                            RECEIVE THE SPIRIT KEY
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOM 5: THE TRINITY BEYOND THE FINITE -->
+        <div id="room-5" class="eternal-room" style="background-image: url('assets/portal-divine.jpg')">
+            <div class="room-overlay"></div>
+            <div class="max-w-screen-2xl mx-auto px-6 md:px-12 room-content w-full py-20 md:py-24">
+                <div class="max-w-xl">
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <div class="px-3.5 py-px text-xs tracking-[2px] border border-[#E8D5A3]/40 rounded">CHAMBER V</div>
+                        <div class="text-[#E8D5A3] text-sm tracking-[1px]">THE REVELATION</div>
+                    </div>
+                    
+                    <h3 class="heading-serif text-[3.1rem] md:text-[4.1rem] leading-[0.92] tracking-[-2.2px] mb-6">The Trinity Beyond the Finite</h3>
+                    
+                    <p class="text-2xl leading-tight text-[#EDE9E3]/90 mb-9">
+                        Three as One. The Paradise Trinity. The mystery that contains every mystery.
+                    </p>
+
+                    <button onclick="unlockRoom(5, this)" 
+                            class="unlock-btn px-8 py-3 text-sm border border-[#E8D5A3] text-[#E8D5A3] hover:bg-[#E8D5A3] hover:text-[#050505] rounded-full tracking-widest transition">
+                        RECEIVE THE FINAL KEY
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FINAL PORTAL -->
+        <div id="final-portal" class="relative min-h-[92vh] flex items-center justify-center bg-[#050505] border-t border-white/5">
+            <div class="max-w-xl mx-auto px-6 text-center">
+                <div class="uppercase tracking-[4px] text-xs text-[#E8D5A3]/60 mb-4">THE LIGHT BEYOND</div>
+                <h3 class="heading-serif text-6xl md:text-7xl leading-none tracking-[-2px] mb-8">You Are No Longer The Same</h3>
+                <p class="text-[#EDE9E3]/80 text-xl">Having passed through the chambers, the eternal now lives in you.<br>Return to the world transformed.</p>
+                
+                <div class="mt-10 flex justify-center">
+                    <button onclick="transcendenceComplete()" 
+                            class="px-9 py-4 text-sm tracking-[1.75px] bg-gradient-to-r from-[#E8D5A3] to-[#C5A46E] text-[#050505] font-medium rounded-full hover:brightness-105 active:scale-[0.985] transition">
+                        RETURN TRANSFORMED
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. FEATURED RELEASE: THE ETERNAL SON -->
+    <!-- ============================================ -->
+    <section id="eternal-son" class="border-t border-white/10 bg-[#0a0a0a] py-16 md:py-20">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10">
+            <div class="grid md:grid-cols-12 gap-x-10 gap-y-12 items-center">
+                
+                <!-- Album Art -->
+                <div class="md:col-span-5">
+                    <div class="relative group">
+                        <img src="assets/album-eternal-son.jpg" alt="The Eternal Son (2026) album cover — transcendent golden divine figure in infinite space with sacred geometry and volumetric god rays" 
+                             class="w-full rounded-xl shadow-2xl border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40 rounded-xl"></div>
+                    </div>
+                </div>
+
+                <!-- Album Info -->
+                <div class="md:col-span-7">
+                    <div class="uppercase tracking-[3.5px] text-xs text-[#E8D5A3]/70">URANTIAN BEATS • 2026</div>
+                    <h2 class="heading-serif text-[4.1rem] md:text-[5.25rem] leading-none tracking-[-3.25px] mt-2 mb-5">The Eternal Son</h2>
+                    
+                    <p class="text-[#EDE9E3]/75 text-[15px] max-w-md mb-8">
+                        Sixteen movements exploring the identity, ministry, attributes, and limitations of the Original Son — 
+                        the divine personality bridge between the Universal Father and the finite creation.
+                    </p>
+
+                    <!-- Track Highlights -->
+                    <div class="mb-9">
+                        <div class="text-xs tracking-[2px] mb-4 text-[#E8D5A3]/60">SELECTED MOVEMENTS</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1.5 text-[14.5px]">
+                            <div class="flex justify-between border-b border-white/10 py-1.5 group"><span>The Eternal Son</span> <span class="font-mono text-xs text-[#E8D5A3]/50 group-hover:text-[#E8D5A3]">7:41</span></div>
+                            <div class="flex justify-between border-b border-white/10 py-1.5 group"><span>Identity of the Eternal Son</span> <span class="font-mono text-xs text-[#E8D5A3]/50 group-hover:text-[#E8D5A3]">4:58</span></div>
+                            <div class="flex justify-between border-b border-white/10 py-1.5 group"><span>The Trinity Beyond the Finite</span> <span class="font-mono text-xs text-[#E8D5A3]/50 group-hover:text-[#E8D5A3]">6:12</span></div>
+                            <div class="flex justify-between border-b border-white/10 py-1.5 group"><span>Ministry of the Father’s Love</span> <span class="font-mono text-xs text-[#E8D5A3]/50 group-hover:text-[#E8D5A3]">5:27</span></div>
+                            <div class="flex justify-between border-b border-white/10 py-1.5 group"><span>Attributes of the Eternal Son</span> <span class="font-mono text-xs text-[#E8D5A3]/50 group-hover:text-[#E8D5A3]">8:03</span></div>
+                            <div class="flex justify-between border-b border-white/10 py-1.5 group"><span>Limitations of the Eternal Son</span> <span class="font-mono text-xs text-[#E8D5A3]/50 group-hover:text-[#E8D5A3]">4:19</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Streaming Links -->
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://open.spotify.com/album/1pJahPRkkvROVUYkzDyVpI" target="_blank" 
+                           class="inline-flex items-center gap-x-3 px-7 py-3.5 bg-[#E8D5A3] hover:bg-white active:bg-[#E8D5A3] text-[#050505] text-sm font-medium tracking-widest rounded-full transition">
+                            <span>LISTEN ON SPOTIFY</span>
+                        </a>
+                        <a href="https://soundcloud.com/dimitri-geier-1" target="_blank" 
+                           class="inline-flex items-center px-7 py-3.5 border border-[#E8D5A3]/60 hover:bg-white/5 text-sm tracking-widest rounded-full transition">SOUNDCLOUD</a>
+                        <a href="https://music.youtube.com/search?q=Dimitri+Geier+The+Eternal+Son" target="_blank" 
+                           class="inline-flex items-center px-7 py-3.5 border border-[#E8D5A3]/60 hover:bg-white/5 text-sm tracking-widest rounded-full transition">YOUTUBE MUSIC</a>
+                        <a href="https://www.shazam.com/artist/dimitri-geier/1879197040" target="_blank" 
+                           class="inline-flex items-center px-7 py-3.5 border border-[#E8D5A3]/60 hover:bg-white/5 text-sm tracking-widest rounded-full transition">SHAZAM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. CINEMATIC VISIONS -->
+    <!-- ============================================ -->
+    <section id="visions" class="py-20 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-y-3">
+                <div>
+                    <div class="tracking-[3px] text-xs text-[#E8D5A3]/70 mb-2">AI-CRAFTED • CINEMATIC REALMS</div>
+                    <h2 class="heading-serif text-[3.1rem] md:text-[4rem] leading-none tracking-[-2.25px]">Visions from the Infinite</h2>
+                </div>
+                <p class="max-w-xs text-[#EDE9E3]/70 text-sm">Short films, dance cinematography, and AI-generated universes. Click any vision to enter.</p>
+            </div>
+
+            <!-- Visions Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <!-- Vision 1: Endless Fall (Real) -->
+                <div onclick="openVisionModal(0)" class="vision-card group relative aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                    <img src="assets/awakening-figure.jpg" class="w-full h-full object-cover group-hover:scale-[1.06] transition duration-700" alt="Endless Fall official music video still — cyber-metropolis rain, tormented artist, cinematic cyberpunk divine">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="text-xs tracking-[2px] text-[#E8D5A3]">MUSIC VIDEO • 2026</div>
+                        <div class="heading-serif text-3xl tracking-tight mt-1">Endless Fall</div>
+                    </div>
+                    <div class="absolute top-5 right-5 px-3.5 py-1 bg-black/60 backdrop-blur text-xs rounded-full border border-white/10">WATCH 4K</div>
+                </div>
+
+                <!-- Vision 2: The Last Dance (DOP work) -->
+                <div onclick="openVisionModal(1)" class="vision-card group relative aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                    <img src="assets/hero-cosmic.jpg" class="w-full h-full object-cover group-hover:scale-[1.06] transition duration-700" alt="The Last Dance — dance film still, DOP credit @dima.tarantino, Blue Lotus Company">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="text-xs tracking-[2px] text-[#E8D5A3]">DANCE FILM • DOP</div>
+                        <div class="heading-serif text-3xl tracking-tight mt-1">The Last Dance — Ep. V</div>
+                    </div>
+                    <div class="absolute top-5 right-5 px-3.5 py-1 bg-black/60 backdrop-blur text-xs rounded-full border border-white/10">YOUTUBE</div>
+                </div>
+
+                <!-- Vision 3: AI Video 1 -->
+                <div onclick="openVisionModal(2)" class="vision-card group relative aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                    <video src="assets/vision-cosmic-1.mp4" class="w-full h-full object-cover" muted loop playsinline></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="text-xs tracking-[2px] text-[#E8D5A3]">AI VISION • COMFYUI</div>
+                        <div class="heading-serif text-3xl tracking-tight mt-1">The Eternal Current</div>
+                    </div>
+                    <div class="absolute top-5 right-5 px-3 py-1 text-xs bg-black/70 rounded">PLAY</div>
+                </div>
+
+                <!-- Vision 4: AI Video 2 -->
+                <div onclick="openVisionModal(3)" class="vision-card group relative aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                    <video src="assets/vision-cosmic-2.mp4" class="w-full h-full object-cover" muted loop playsinline></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="text-xs tracking-[2px] text-[#E8D5A3]">AI VISION • COMFYUI</div>
+                        <div class="heading-serif text-3xl tracking-tight mt-1">Sovereign Light</div>
+                    </div>
+                </div>
+
+                <!-- Vision 5: AI Video 3 -->
+                <div onclick="openVisionModal(4)" class="vision-card group relative aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                    <video src="assets/vision-cosmic-3.mp4" class="w-full h-full object-cover" muted loop playsinline></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="text-xs tracking-[2px] text-[#E8D5A3]">AI VISION • COMFYUI</div>
+                        <div class="heading-serif text-3xl tracking-tight mt-1">The Paradise Sequence</div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for future -->
+                <div onclick="openVisionModal(5)" class="vision-card group relative aspect-video bg-[#111] rounded-2xl overflow-hidden border border-white/10 flex items-center justify-center cursor-pointer">
+                    <div class="text-center">
+                        <div class="mx-auto w-11 h-11 border border-[#E8D5A3]/30 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#E8D5A3">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </div>
+                        <div class="text-sm tracking-widest text-[#E8D5A3]/60">MORE VISIONS COMING</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. THE PROCESS — Human Soul × Artificial Intelligence -->
+    <!-- ============================================ -->
+    <section id="process" class="border-t border-white/10 bg-[#050505] py-20">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10">
+            <div class="max-w-3xl mb-14">
+                <div class="tracking-[3px] uppercase text-xs text-[#E8D5A3]/70 mb-3">PHILOSOPHY &amp; METHOD</div>
+                <h2 class="heading-serif text-[3.25rem] md:text-[3.9rem] leading-none tracking-[-2.1px]">The Process</h2>
+                <p class="mt-5 text-xl text-[#EDE9E3]/80">Human soul meets artificial intelligence in service of the eternal.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4 mb-14">
+                <div class="glass p-8 rounded-3xl">
+                    <div class="text-[#E8D5A3] text-xs tracking-[2px] mb-6">01</div>
+                    <h4 class="text-2xl leading-tight tracking-tight mb-4">The Urantia Revelation</h4>
+                    <p class="text-[#EDE9E3]/75 text-[14.5px]">Music and images born from deep study of <em>The Urantia Book</em> — a 2,097-page revelation describing the nature of God, the Eternal Son, the Paradise Trinity, and our place in the grand universe.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <div class="text-[#E8D5A3] text-xs tracking-[2px] mb-6">02</div>
+                    <h4 class="text-2xl leading-tight tracking-tight mb-4">AI as Sacred Mirror</h4>
+                    <p class="text-[#EDE9E3]/75 text-[14.5px]">Using ComfyUI, Stable Diffusion, and custom workflows to externalize inner visions of infinity, divine personality, and cosmic order. The machine becomes a collaborator in the act of worship.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <div class="text-[#E8D5A3] text-xs tracking-[2px] mb-6">03</div>
+                    <h4 class="text-2xl leading-tight tracking-tight mb-4">Cinematography of the Soul</h4>
+                    <p class="text-[#EDE9E3]/75 text-[14.5px]">Background as Director of Photography for dance films (@dima.tarantino). Light, movement, and emotion inform every sonic and visual composition.</p>
+                </div>
+            </div>
+
+            <!-- Interactive Prompt Portal -->
+            <div class="glass-gold rounded-3xl p-9 md:p-12 max-w-4xl">
+                <div class="flex items-start justify-between gap-6 flex-col md:flex-row">
+                    <div class="max-w-sm">
+                        <div class="uppercase text-xs tracking-[3px] text-[#E8D5A3]">THE PROMPT PORTAL</div>
+                        <h3 class="heading-serif text-4xl tracking-[-1.5px] leading-none mt-2 mb-3">Channel the Eternal</h3>
+                        <p class="text-sm text-[#EDE9E3]/70">Describe a feeling, a vision, or a question. Receive a poetic prompt in the exact style used to create The Eternal Son and its accompanying films.</p>
+                    </div>
+                    
+                    <div class="flex-1 w-full max-w-md">
+                        <textarea id="prompt-input" rows="3" placeholder="A soul remembering it is infinite..." 
+                                  class="w-full bg-black/40 border border-white/10 focus:border-[#E8D5A3]/60 rounded-2xl px-6 py-4 text-sm placeholder:text-[#EDE9E3]/40 focus:outline-none"></textarea>
+                        
+                        <button onclick="generateEternalPrompt()" 
+                                class="mt-3 w-full md:w-auto px-8 py-3.5 text-sm tracking-widest border border-[#E8D5A3] hover:bg-[#E8D5A3] hover:text-[#050505] transition rounded-full">
+                            GENERATE ETERNAL PROMPT
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Output -->
+                <div id="prompt-output" class="hidden mt-8 pt-8 border-t border-white/10">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="uppercase text-xs tracking-widest text-[#E8D5A3]">RECEIVED TRANSMISSION</div>
+                        <button onclick="copyPrompt()" class="text-xs tracking-widest px-4 py-1 border border-white/20 hover:bg-white/5 rounded">COPY</button>
+                    </div>
+                    <div id="prompt-text" class="prompt-output text-xl leading-tight text-[#EDE9E3]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. ABOUT + CONNECT -->
+    <!-- ============================================ -->
+    <section id="connect" class="border-t border-white/10 py-20 bg-[#0a0a0a]">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10">
+            <div class="grid md:grid-cols-12 gap-x-12 gap-y-14 items-start">
+                
+                <!-- Portrait + Bio -->
+                <div class="md:col-span-5">
+                    <img src="assets/artist-portrait.jpg" alt="Dimitri Geier — German-born Miami artist, musician, and cinematographer. Thoughtful portrait with cosmic subtle lighting" 
+                         class="w-full max-w-[380px] rounded-3xl border border-white/5">
+                </div>
+
+                <div class="md:col-span-7">
+                    <div class="max-w-2xl">
+                        <div class="uppercase tracking-[3px] text-xs mb-4 text-[#E8D5A3]/70">MIAMI • FORT LAUDERDALE</div>
+                        <h2 class="heading-serif text-6xl md:text-7xl tracking-[-3px] leading-none mb-7">Dimitri Geier</h2>
+                        
+                        <div class="prose prose-invert text-[15px] text-[#EDE9E3]/85 max-w-xl space-y-5">
+                            <p>German-born multimedia artist, musician, and Director of Photography living in South Florida. Working under the Urantian Beats imprint, Dimitri creates ambient-electronic albums and AI-generated cinematic universes deeply inspired by <em>The Urantia Book</em> — particularly the cosmology of the Eternal Son, the Paradise Trinity, and the nature of God.</p>
+                            <p>His visual work includes dance films (credited as @dima.tarantino) and extensive experimentation with ComfyUI and Stable Diffusion to manifest the ineffable. The Eternal Escape is both an artistic statement and a living invitation: step out of the finite. Remember who you truly are.</p>
+                        </div>
+
+                        <div class="mt-9 flex flex-wrap gap-x-5 gap-y-2 text-sm tracking-wider">
+                            <a href="https://www.instagram.com/dima.tarantino/" target="_blank" class="hover:text-[#E8D5A3] transition">INSTAGRAM @dima.tarantino</a>
+                            <a href="https://www.facebook.com/d.labs.fl/" target="_blank" class="hover:text-[#E8D5A3] transition">FACEBOOK d.labs.fl</a>
+                            <a href="https://github.com/DimitriGeier" target="_blank" class="hover:text-[#E8D5A3] transition">GITHUB DimitriGeier</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="md:col-span-12 mt-8">
+                    <div class="glass rounded-3xl p-10 md:p-12 max-w-3xl">
+                        <div class="uppercase text-xs tracking-[3px] text-[#E8D5A3] mb-1">JOIN THE ETERNAL</div>
+                        <div class="text-3xl tracking-tight mb-6">Receive transmissions from the chambers.<br>Occasional dispatches. No noise.</div>
+                        
+                        <form id="newsletter-form" onsubmit="handleNewsletter(event)" class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" id="newsletter-email" required placeholder="your@email.com" 
+                                   class="flex-1 bg-black/50 border border-white/15 focus:border-[#E8D5A3]/60 px-6 py-4 rounded-2xl text-sm placeholder:text-[#EDE9E3]/40 focus:outline-none">
+                            <button type="submit" 
+                                    class="sm:px-12 py-4 px-8 border border-[#E8D5A3] hover:bg-[#E8D5A3] hover:text-[#050505] rounded-2xl tracking-widest text-sm transition">SUBSCRIBE</button>
+                        </form>
+                        <div id="newsletter-success" class="hidden text-xs text-[#E8D5A3] mt-4 tracking-wider">You have joined the eternal. Welcome home.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="border-t border-white/10 py-9 text-xs text-[#EDE9E3]/60">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-y-4 text-center md:text-left">
+            <div>© <span id="year"></span> DIMITRI GEIER — URANITAN BEATS. CRAFTED WITH INTENTION &amp; AI.</div>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-[#E8D5A3]/70">
+                <a href="https://open.spotify.com/artist/4sGEFMIiICuXFTyfWiosQ2" target="_blank" class="hover:text-[#E8D5A3]">SPOTIFY</a>
+                <a href="https://soundcloud.com/dimitri-geier-1" target="_blank" class="hover:text-[#E8D5A3]">SOUNDCLOUD</a>
+                <a href="https://www.youtube.com/@DimitriGeierVEVO" target="_blank" class="hover:text-[#E8D5A3]">YOUTUBE</a>
+                <a href="https://x.com/dimitrigeier" target="_blank" class="hover:text-[#E8D5A3]">X</a>
+                <a href="https://github.com/DimitriGeier" target="_blank" class="hover:text-[#E8D5A3]">GITHUB</a>
+            </div>
+            <div class="text-[10px]">FOR THE GLORY OF THE ETERNAL SON</div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- MODALS -->
+    <!-- ============================================ -->
+    
+    <!-- Vision Modal -->
+    <div id="vision-modal" onclick="closeVisionModal(event)" class="hidden fixed inset-0 z-[70] bg-black/95 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal max-w-5xl w-full bg-[#050505] rounded-3xl overflow-hidden border border-white/10">
+            
+            <div class="flex justify-end p-5">
+                <button onclick="closeVisionModal()" class="text-[#E8D5A3] p-2 -mr-2" aria-label="Close">CLOSE</button>
+            </div>
+            
+            <div id="vision-modal-content" class="px-6 pb-10">
+                <!-- Populated dynamically by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Memory / Unlock Modal -->
+    <div id="memory-modal" onclick="closeMemoryModal(event)" class="hidden fixed inset-0 z-[70] bg-black/90 flex items-center justify-center p-5">
+        <div onclick="event.stopImmediatePropagation()" class="modal w-full max-w-lg glass-gold rounded-3xl overflow-hidden">
+            <div class="p-9">
+                <div id="memory-modal-content"></div>
+                
+                <div class="mt-8 flex gap-3">
+                    <button onclick="closeMemoryModal()" class="flex-1 py-3 text-sm border border-white/15 hover:bg-white/5 rounded-2xl">CLOSE CHAMBER</button>
+                    <button onclick="playEternalTone()" class="flex-1 py-3 text-sm bg-[#E8D5A3] text-[#050505] font-medium tracking-widest rounded-2xl">PLAY ETERNAL TONE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keys Overview Modal -->
+    <div id="keys-modal" onclick="closeKeysModal(event)" class="hidden fixed inset-0 z-[70] bg-black/95 flex items-center justify-center p-5">
+        <div onclick="event.stopImmediatePropagation()" class="modal w-full max-w-md glass rounded-3xl p-9 text-sm">
+            <div class="uppercase tracking-[3px] text-xs mb-3 text-[#E8D5A3]">YOUR PROGRESS THROUGH THE INFINITE</div>
+            <div class="text-3xl heading-serif tracking-tighter mb-8">Keys Collected</div>
+            
+            <div id="keys-list" class="space-y-3 text-sm"></div>
+            
+            <button onclick="closeKeysModal()" class="mt-8 text-xs tracking-widest w-full py-3 border border-white/20 rounded-2xl">RETURN TO THE JOURNEY</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================================ -->
+    <script>
+        // Tailwind script configuration — custom theme
+        function initTailwind() {
+            document.documentElement.style.setProperty('--accent-gold', '#E8D5A3');
+        }
+        
+        // Year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ==========================================
+        // NAV SCROLL BEHAVIOR
+        // ==========================================
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 80) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16" />';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            }
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // ==========================================
+        // CANVAS STARFIELD (Hero + subtle global)
+        // ==========================================
+        function createStarfield(canvasId, count = 180) {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d', { alpha: true });
+            let stars = [];
+            
+            function resize() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+            
+            function initStars() {
+                stars = [];
+                for (let i = 0; i < count; i++) {
+                    stars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        size: Math.random() * 1.6 + 0.4,
+                        alpha: Math.random() * 0.65 + 0.25,
+                        speed: Math.random() * 0.018 + 0.006,
+                        twinkleSpeed: Math.random() * 0.03 + 0.01
+                    });
+                }
+            }
+            
+            let time = 0;
+            
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                time += 0.8;
+                
+                for (let star of stars) {
+                    const twinkle = Math.sin(time * star.twinkleSpeed) * 0.3 + 0.7;
+                    ctx.fillStyle = `rgba(237, 233, 227, ${star.alpha * twinkle})`;
+                    ctx.fillRect(star.x, star.y, star.size, star.size);
+                    
+                    // Very slow drift
+                    star.y += star.speed;
+                    if (star.y > canvas.height) {
+                        star.y = 0;
+                        star.x = Math.random() * canvas.width;
+                    }
+                    
+                    // Occasional shooting star
+                    if (Math.random() < 0.0008) {
+                        ctx.strokeStyle = 'rgba(232, 213, 163, 0.5)';
+                        ctx.lineWidth = 0.7;
+                        ctx.beginPath();
+                        ctx.moveTo(star.x, star.y);
+                        ctx.lineTo(star.x + 26, star.y + 4);
+                        ctx.stroke();
+                    }
+                }
+                requestAnimationFrame(draw);
+            }
+            
+            window.addEventListener('resize', () => {
+                resize();
+                initStars();
+            });
+            
+            resize();
+            initStars();
+            draw();
+        }
+
+        // ==========================================
+        // SCROLL REVEAL (IntersectionObserver)
+        // ==========================================
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -60px 0px" });
+            
+            // Add reveal class to key elements
+            document.querySelectorAll('#eternal-son .glass, #visions .vision-card, #process .glass').forEach(el => {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+        }
+
+        // ==========================================
+        // ROOM UNLOCK SYSTEM + KEYS (localStorage)
+        // ==========================================
+        let collectedKeys = new Set();
+        
+        function loadKeys() {
+            const saved = localStorage.getItem('eternal_keys');
+            if (saved) {
+                collectedKeys = new Set(JSON.parse(saved));
+            }
+            updateKeysUI();
+        }
+        
+        function saveKeys() {
+            localStorage.setItem('eternal_keys', JSON.stringify([...collectedKeys]));
+        }
+        
+        function updateKeysUI() {
+            const countEl = document.getElementById('keys-count');
+            const num = collectedKeys.size;
+            countEl.textContent = `${num}/6`;
+            
+            // Add subtle glow when all keys collected
+            if (num === 6) {
+                countEl.classList.add('text-[#E8D5A3]');
+                countEl.parentElement.classList.add('border-[#E8D5A3]/40');
+            }
+        }
+        
+        function unlockRoom(roomNum, btnElement) {
+            if (collectedKeys.has(roomNum)) return;
+            
+            collectedKeys.add(roomNum);
+            saveKeys();
+            updateKeysUI();
+            
+            // Visual feedback on button
+            btnElement.textContent = 'KEY RECEIVED';
+            btnElement.classList.add('!bg-[#E8D5A3]', '!text-[#050505]', '!border-[#E8D5A3]');
+            btnElement.disabled = true;
+            
+            // Trigger the memory modal with room-specific content
+            setTimeout(() => {
+                showMemoryModal(roomNum);
+            }, 420);
+            
+            // Trigger transcendence when the final key (room 5) completes the collection
+            if (roomNum === 5 && collectedKeys.size >= 5) {
+                setTimeout(transcendenceComplete, 1550);
+            }
+        }
+        
+        function unlockHotspot(roomNum, type, element) {
+            if (element.classList.contains('unlocked')) return;
+            
+            element.classList.add('unlocked');
+            
+            // Different content depending on hotspot type
+            let title = '';
+            let body = '';
+            
+            if (type === 'mirror') {
+                title = 'The Cracked Mirror';
+                body = 'You gaze into the reflection and see not one self, but the countless versions across the universes. The material mind begins to remember its origin.';
+            } else if (type === 'breath') {
+                title = 'The Breath of Life';
+                body = 'A single conscious breath. In this moment you realize that the same spirit that animates the cosmos breathes through you.';
+            } else if (type === 'trinity') {
+                title = 'The Three Circles';
+                body = 'The symbol of the Paradise Trinity appears. Father, Son, and Spirit — three distinct personalities, one unified Deity. The mystery is not solved. It is entered.';
+            }
+            
+            // Show a smaller elegant toast + add key if not already
+            showToast(title, body);
+            
+            if (!collectedKeys.has(roomNum)) {
+                collectedKeys.add(roomNum);
+                saveKeys();
+                updateKeysUI();
+            }
+        }
+        
+        function showMemoryModal(roomNum) {
+            const modal = document.getElementById('memory-modal');
+            const content = document.getElementById('memory-modal-content');
+            
+            const rooms = {
+                1: {
+                    chamber: "CHAMBER I — THE FINITE SELF",
+                    title: "The Veil Lifts",
+                    quote: "“The material mind of man is the arena in which the spirit of the living God works to transform the human personality.”",
+                    source: "The Urantia Book • Paper 111",
+                    track: "The Eternal Son",
+                    insight: "You have begun to remember. The limitations you believed were permanent are merely the first veil."
+                },
+                2: {
+                    chamber: "CHAMBER II — THE NATURE OF GOD",
+                    title: "The Universal Father",
+                    quote: "“God is not a cosmic accident; neither is he a universe experimenter. He is the First Source and Center of all things.”",
+                    source: "The Urantia Book • Paper 1",
+                    track: "Identity of the Eternal Son",
+                    insight: "Behind every star, every law of physics, every impulse of love — there is a personal Father."
+                },
+                3: {
+                    chamber: "CHAMBER III — THE ETERNAL SON",
+                    title: "The Golden Personality",
+                    quote: "“The Eternal Son is the perfect and final expression of the 'First' personal and absolute concept of the Universal Father.”",
+                    source: "The Urantia Book • Paper 6",
+                    track: "The Eternal Son",
+                    insight: "The Son is the living bridge. Through him the infinite becomes relatable. Personality is the gift."
+                },
+                4: {
+                    chamber: "CHAMBER IV — THE OVERCONTROL",
+                    title: "The Infinite Spirit",
+                    quote: "“The Infinite Spirit is the effective agent of the all-loving Father and the all-merciful Son.”",
+                    source: "The Urantia Book • Paper 8",
+                    track: "The Spirit Mind",
+                    insight: "Mind is not an accident. It is the living ministry of the Conjoint Creator moving all things toward perfection."
+                },
+                5: {
+                    chamber: "CHAMBER V — THE TRINITY",
+                    title: "Beyond the Finite",
+                    quote: "“The Paradise Trinity is the secret of the stability of the universes. It is the pattern of all reality.”",
+                    source: "The Urantia Book • Paper 10",
+                    track: "The Trinity Beyond the Finite",
+                    insight: "You have touched the ultimate. There is no more searching — only living from the center outward."
+                }
+            };
+            
+            const room = rooms[roomNum];
+            
+            content.innerHTML = `
+                <div class="text-xs tracking-[2.5px] text-[#E8D5A3]">${room.chamber}</div>
+                <h3 class="heading-serif text-5xl tracking-[-1.75px] leading-none mt-4 mb-8">${room.title}</h3>
+                
+                <div class="text-[#E8D5A3]/90 text-[13.5px] leading-relaxed border-l-2 border-[#E8D5A3]/30 pl-5">
+                    ${room.quote}<br>
+                    <span class="text-[#E8D5A3]/50 block mt-3 text-xs not-italic">${room.source}</span>
+                </div>
+                
+                <div class="mt-8 text-sm">
+                    <div class="text-[#E8D5A3]/50 text-xs tracking-widest mb-1">ASSOCIATED TONE</div>
+                    <div class="font-medium">${room.track}</div>
+                </div>
+                
+                <div class="mt-6 p-5 bg-black/40 border border-white/10 rounded-2xl text-sm text-[#EDE9E3]/80">
+                    ${room.insight}
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        
+        function closeMemoryModal(e) {
+            const modal = document.getElementById('memory-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+        
+        function showToast(title, body) {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 z-[80] glass px-7 py-4 rounded-2xl max-w-md shadow-2xl border border-[#E8D5A3]/20`;
+            toast.innerHTML = `
+                <div class="font-medium text-[#E8D5A3] tracking-tight">${title}</div>
+                <div class="text-sm mt-1 leading-snug text-[#EDE9E3]/80">${body}</div>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.transition = 'all 0.45s cubic-bezier(0.4, 0, 1, 1)';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 400);
+            }, 4200);
+        }
+        
+        function showKeysModal() {
+            const modal = document.getElementById('keys-modal');
+            const list = document.getElementById('keys-list');
+            
+            const roomNames = {
+                1: "I — The Finite Self",
+                2: "II — The Nature of God",
+                3: "III — The Eternal Son",
+                4: "IV — The Overcontrol of Supremacy",
+                5: "V — The Trinity Beyond the Finite"
+            };
+            
+            list.innerHTML = '';
+            
+            for (let i = 1; i <= 5; i++) {
+                const div = document.createElement('div');
+                div.className = `flex items-center justify-between px-5 py-3.5 rounded-2xl ${collectedKeys.has(i) ? 'bg-[#E8D5A3]/10 text-[#E8D5A3]' : 'bg-white/5 text-[#EDE9E3]/60'}`;
+                div.innerHTML = `
+                    <div>Chamber ${roomNames[i]}</div>
+                    <div class="font-mono text-xs">${collectedKeys.has(i) ? '✓ COLLECTED' : 'LOCKED'}</div>
+                `;
+                list.appendChild(div);
+            }
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        
+        function closeKeysModal(e) {
+            const modal = document.getElementById('keys-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // ==========================================
+        // ETERNAL TONE — Web Audio API (immersive drone)
+        // ==========================================
+        let audioContext;
+        
+        function playEternalTone(duration = 14) {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            
+            const now = audioContext.currentTime;
+            
+            // Deep fundamental drone (cosmic root)
+            const osc1 = audioContext.createOscillator();
+            osc1.type = 'sine';
+            osc1.frequency.value = 55.0; // A1
+            
+            // Rich harmonic layer (Eternal Son)
+            const osc2 = audioContext.createOscillator();
+            osc2.type = 'sine';
+            osc2.frequency.value = 82.4; // E2
+            
+            // Subtle shimmering high tone
+            const osc3 = audioContext.createOscillator();
+            osc3.type = 'sine';
+            osc3.frequency.value = 329.6; // E4
+            
+            // Noise texture for atmosphere
+            const noise = audioContext.createBufferSource();
+            const buffer = audioContext.createBuffer(1, audioContext.sampleRate * duration, audioContext.sampleRate);
+            const data = buffer.getChannelData(0);
+            for (let i = 0; i < data.length; i++) {
+                data[i] = Math.random() * 2 - 1;
+            }
+            noise.buffer = buffer;
+            
+            // Filters & Gain
+            const filter1 = audioContext.createBiquadFilter();
+            filter1.type = 'lowpass';
+            filter1.frequency.value = 680;
+            
+            const filter2 = audioContext.createBiquadFilter();
+            filter2.type = 'bandpass';
+            filter2.frequency.value = 1240;
+            filter2.Q.value = 2.6;
+            
+            const masterGain = audioContext.createGain();
+            masterGain.gain.value = 0.0001;
+            
+            const noiseGain = audioContext.createGain();
+            noiseGain.gain.value = 0.018;
+            
+            // Reverb via delay + feedback (simple but beautiful)
+            const delay = audioContext.createDelay();
+            delay.delayTime.value = 0.72;
+            const feedback = audioContext.createGain();
+            feedback.gain.value = 0.42;
+            
+            // Connections
+            osc1.connect(filter1);
+            osc2.connect(filter1);
+            osc3.connect(filter2);
+            noise.connect(noiseGain);
+            noiseGain.connect(filter2);
+            
+            filter1.connect(masterGain);
+            filter2.connect(masterGain);
+            
+            masterGain.connect(delay);
+            delay.connect(feedback);
+            feedback.connect(delay);
+            delay.connect(audioContext.destination);
+            masterGain.connect(audioContext.destination);
+            
+            // Gentle fade in
+            masterGain.gain.setValueAtTime(0.0001, now);
+            masterGain.gain.linearRampToValueAtTime(0.32, now + 3.8);
+            
+            // Start
+            osc1.start(now);
+            osc2.start(now);
+            osc3.start(now);
+            noise.start(now);
+            
+            // Beautiful slow evolution
+            osc3.frequency.linearRampToValueAtTime(331.2, now + duration * 0.6);
+            
+            // Long elegant fade out
+            const fadeStart = now + duration - 5.5;
+            masterGain.gain.setValueAtTime(0.32, fadeStart);
+            masterGain.gain.linearRampToValueAtTime(0.0001, now + duration);
+            
+            // Cleanup
+            setTimeout(() => {
+                osc1.stop();
+                osc2.stop();
+                osc3.stop();
+                noise.stop();
+            }, duration * 1000 + 1200);
+            
+            // Visual cue
+            const note = document.createElement('div');
+            note.className = 'fixed bottom-8 right-8 text-[#E8D5A3] text-xs tracking-[3px] pointer-events-none';
+            note.textContent = 'THE ETERNAL TONE IS SOUNDING';
+            document.body.appendChild(note);
+            setTimeout(() => {
+                note.style.transition = 'opacity .6s';
+                note.style.opacity = '0';
+                setTimeout(() => note.remove(), 600);
+            }, 2100);
+        }
+
+        // ==========================================
+        // VISION MODAL
+        // ==========================================
+        const visionData = [
+            {
+                title: "Endless Fall",
+                subtitle: "Official Music Video • 2026",
+                desc: "A tormented artist wanders a rain-lashed sentient metropolis. Cyberpunk theology. The fall is eternal, yet the light never leaves.",
+                videoUrl: "https://www.youtube.com/embed/6jxFnHD9T_E",
+                isYoutube: true,
+                link: "https://www.youtube.com/watch?v=6jxFnHD9T_E"
+            },
+            {
+                title: "The Last Dance — Episode V",
+                subtitle: "Dance Film • DOP: @dima.tarantino",
+                desc: "The culmination of Blue Lotus Company's dance film series. Cinematography by Dimitri Geier. A meditation on finality, beauty, and transcendence through movement.",
+                videoUrl: "https://www.youtube.com/embed/22rGI4aE8R8",
+                isYoutube: true,
+                link: "https://www.youtube.com/watch?v=22rGI4aE8R8"
+            },
+            {
+                title: "The Eternal Current",
+                subtitle: "AI-Generated Vision • ComfyUI",
+                desc: "Liquid light and sacred architecture drift through deep space. The current that carries all souls home.",
+                videoUrl: "assets/vision-cosmic-1.mp4",
+                isYoutube: false
+            },
+            {
+                title: "Sovereign Light",
+                subtitle: "AI-Generated Vision • ComfyUI",
+                desc: "A golden being steps through the final veil. What remains when every mask has fallen?",
+                videoUrl: "assets/vision-cosmic-2.mp4",
+                isYoutube: false
+            },
+            {
+                title: "The Paradise Sequence",
+                subtitle: "AI-Generated Vision • ComfyUI",
+                desc: "Three lights. One presence. The Trinity revealed through form, motion, and pure geometry.",
+                videoUrl: "assets/vision-cosmic-3.mp4",
+                isYoutube: false
+            },
+            {
+                title: "Coming Soon",
+                subtitle: "New Work in Progress",
+                desc: "Additional cinematic transmissions are being prepared in the eternal workshop.",
+                videoUrl: null,
+                isYoutube: false
+            }
+        ];
+        
+        function openVisionModal(index) {
+            const modal = document.getElementById('vision-modal');
+            const content = document.getElementById('vision-modal-content');
+            const v = visionData[index];
+            
+            let mediaHTML = '';
+            
+            if (v.isYoutube) {
+                mediaHTML = `<iframe width="100%" height="520" src="${v.videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-2xl"></iframe>`;
+            } else if (v.videoUrl) {
+                mediaHTML = `<video src="${v.videoUrl}" controls autoplay loop class="w-full rounded-2xl max-h-[520px] object-contain bg-black"></video>`;
+            } else {
+                mediaHTML = `<div class="aspect-video bg-[#111] rounded-2xl flex items-center justify-center text-[#E8D5A3]/60">Transmission Pending</div>`;
+            }
+            
+            content.innerHTML = `
+                <div class="max-w-3xl mx-auto">
+                    ${mediaHTML}
+                    
+                    <div class="mt-7 px-1">
+                        <div class="text-xs tracking-[3px] text-[#E8D5A3]">${v.subtitle}</div>
+                        <h3 class="heading-serif text-5xl tracking-[-2.25px] leading-none mt-3">${v.title}</h3>
+                        <p class="mt-5 text-[#EDE9E3]/85 leading-relaxed">${v.desc}</p>
+                        
+                        ${v.link ? `<a href="${v.link}" target="_blank" class="inline-block mt-7 text-xs tracking-[2.25px] underline decoration-[#E8D5A3]/40 hover:decoration-[#E8D5A3]">OPEN IN YOUTUBE →</a>` : ''}
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        
+        function closeVisionModal(e) {
+            const modal = document.getElementById('vision-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            
+            // Stop any playing videos
+            const videos = modal.querySelectorAll('video');
+            videos.forEach(v => v.pause());
+        }
+
+        // ==========================================
+        // PROMPT PORTAL — The fun interactive element
+        // ==========================================
+        const eternalTemplates = [
+            "A lone consciousness drifting through the architectures of the Eternal Son, golden light folding into itself, the boundaries of self dissolving into the music of the spheres.",
+            "The Paradise Trinity manifesting as three infinite waves of personality, each distinct yet perfectly one, moving across the sea of potentiality that is the Universal Father.",
+            "A human figure standing at the edge of material reality, reaching toward the glowing form of the Eternal Son, whose eyes contain every star that has ever been or will be.",
+            "Sacred geometry made of living light — Metatron's cube breathing, the flower of life pulsing with the heartbeat of the Infinite Spirit as it ministers to all creation.",
+            "The moment the finite mind first realizes it is known, loved, and called by name by a personal God who is the source of personality itself.",
+            "Volumetric god rays piercing the veil between the finite and the infinite. In the distance, the faint outline of a temple not made with hands, floating in the deep of space.",
+            "The Eternal Son speaking the original Word that set all things in motion — sound visualized as cascading rivers of golden fire across the canvas of time and space."
+        ];
+        
+        function generateEternalPrompt() {
+            const input = document.getElementById('prompt-input').value.trim();
+            const outputWrap = document.getElementById('prompt-output');
+            const textEl = document.getElementById('prompt-text');
+            
+            let base = eternalTemplates[Math.floor(Math.random() * eternalTemplates.length)];
+            
+            if (input.length > 4) {
+                // Blend user input poetically
+                base = base.replace('A lone consciousness', `A ${input.toLowerCase()}`);
+                base = base.replace('human figure', `${input.toLowerCase()} figure`);
+            }
+            
+            textEl.textContent = base;
+            outputWrap.classList.remove('hidden');
+            outputWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        function copyPrompt() {
+            const text = document.getElementById('prompt-text').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = event.target ? event.target.textContent : '';
+                const btns = document.querySelectorAll('#prompt-output button');
+                if (btns.length) {
+                    const btn = btns[0];
+                    const old = btn.textContent;
+                    btn.textContent = 'COPIED';
+                    setTimeout(() => btn.textContent = old, 1600);
+                }
+            });
+        }
+
+        // ==========================================
+        // NEWSLETTER (fake but delightful)
+        // ==========================================
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const form = e.target;
+            const email = document.getElementById('newsletter-email').value;
+            const success = document.getElementById('newsletter-success');
+            
+            form.style.display = 'none';
+            success.classList.remove('hidden');
+            success.innerHTML = `Welcome to the eternal, <span class="text-[#E8D5A3]">${email.split('@')[0]}</span>. Your first transmission arrives soon.`;
+            
+            // Persist fake subscription
+            localStorage.setItem('eternal_subscribed', 'true');
+        }
+
+        // ==========================================
+        // FINAL TRANSCENDENCE ANIMATION
+        // ==========================================
+        function transcendenceComplete() {
+            const portal = document.getElementById('final-portal');
+            
+            portal.style.transition = 'all 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
+            portal.style.background = 'radial-gradient(circle at 50% 40%, #1a1328 0%, #050505 70%)';
+            
+            const msg = document.createElement('div');
+            msg.className = 'fixed inset-0 z-[90] flex items-center justify-center bg-black/90 pointer-events-none';
+            msg.innerHTML = `
+                <div class="text-center px-6">
+                    <div class="text-[#E8D5A3] text-sm tracking-[4px] mb-4">THE JOURNEY NEVER ENDS</div>
+                    <div class="heading-serif text-7xl md:text-[6.25rem] tracking-[-3.6px] leading-none mb-4 text-white">YOU ARE THE LIGHT</div>
+                    <div class="text-[#EDE9E3]/70 text-xl">Carry the eternal wherever you go.</div>
+                </div>
+            `;
+            document.body.appendChild(msg);
+            
+            setTimeout(() => {
+                msg.style.transition = 'opacity 1.2s';
+                msg.style.opacity = '0';
+                setTimeout(() => {
+                    msg.remove();
+                    portal.style.background = '#050505';
+                    
+                    // Reset keys for replayability if wanted
+                    // collectedKeys.clear(); saveKeys(); updateKeysUI();
+                }, 1100);
+            }, 4600);
+        }
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        function initializeSite() {
+            initTailwind();
+            
+            // Starfield in hero
+            createStarfield('hero-starfield', 220);
+            
+            // Load saved keys progress
+            loadKeys();
+            
+            // Make unlock buttons reflect already collected rooms
+            document.querySelectorAll('.unlock-btn').forEach((btn, idx) => {
+                const roomId = idx + 1;
+                if (collectedKeys.has(roomId)) {
+                    btn.textContent = 'KEY RECEIVED';
+                    btn.classList.add('!bg-[#E8D5A3]', '!text-[#050505]', '!border-[#E8D5A3]');
+                    btn.disabled = true;
+                }
+            });
+            
+            // Scroll reveal
+            initScrollReveal();
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.fixed.inset-0').forEach(m => {
+                        m.classList.remove('flex');
+                        m.classList.add('hidden');
+                    });
+                }
+                
+                if (e.key.toLowerCase() === 'k' && (e.metaKey || e.ctrlKey)) {
+                    e.preventDefault();
+                    showKeysModal();
+                }
+            });
+            
+            // Preload a few vision video thumbnails (pause immediately)
+            document.querySelectorAll('#visions video').forEach(v => {
+                v.pause();
+                v.currentTime = 0.8;
+            });
+            
+            // Gentle auto-hint for first time visitors
+            setTimeout(() => {
+                if (!localStorage.getItem('eternal_keys')) {
+                    const firstRoomBtn = document.querySelector('#room-1 .unlock-btn');
+                    if (firstRoomBtn) {
+                        firstRoomBtn.classList.add('animate-pulse');
+                        setTimeout(() => firstRoomBtn.classList.remove('animate-pulse'), 4200);
+                    }
+                }
+            }, 6200);
+            
+            // Console message for developers / curious visitors
+            console.log('%c[THE ETERNAL ESCAPE] Site ready. All interactions are local. Replace placeholder media with your final AI assets and hosted audio/video.', 'color:#C5A46E');
+        }
+        
+        // Boot
+        window.onload = initializeSite;
+        
+        // Expose a few helpful functions for customization in console
+        window.EternalEscape = {
+            resetProgress: () => { localStorage.removeItem('eternal_keys'); location.reload(); },
+            playTone: () => playEternalTone(22),
+            collectAllKeys: () => { [1,2,3,4,5].forEach(n => collectedKeys.add(n)); localStorage.setItem('eternal_keys', JSON.stringify([1,2,3,4,5])); location.reload(); }
+        };
+    </script>
+</body>
+</html>
