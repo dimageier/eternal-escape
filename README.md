@@ -3,7 +3,7 @@
 
 A production-ready, single-file HTML experience replicating the luxurious "Escape Room" narrative format of high-end artist sites (inspired by Teyana Taylor's visual album portal) but completely rethemed around Dimitri Geier's Urantia-inspired cosmology, music, and AI-generated visions.
 
-**Live concept**: [dimitrigeier.com/eternal-escape](https://dimitrigeier.com/eternal-escape) (deploy your own copy instantly)
+**Live site**: [https://dimageier.github.io/eternal-escape](https://dimageier.github.io/eternal-escape)
 
 ---
 
